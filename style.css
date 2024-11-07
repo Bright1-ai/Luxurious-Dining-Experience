@@ -414,26 +414,191 @@ h3 {
 .contact-form {
     animation: fadeIn 1.5s ease-out;
 }
-/* Welcome Section */
+/* Welcome Section with Background Image and Overlay */
 #welcome {
     position: relative;
-    padding: 100px 20px;
-    text-align: center;
-    color: white;
-    background: url('https://lh3.googleusercontent.com/p/AF1QipOWaV2zvljJ0_85upJbKbGKfxTZ9rko96vuIvTf=s680-w680-h510') no-repeat center center/cover;
-    height: 100vh; /* Ensure the welcome section fills the screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://lh5.googleusercontent.com/p/AF1QipNi8lwOSed-3UedEflW1rB1QgVJlJYS2ldKdDqo=w141-h235-n-k-no-nu'); /* Replace with your background image URL */
+    background-size: cover;
     background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden;
 }
 
-#welcome h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+/* Gray overlay for readability */
+#welcome::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(74, 74, 74, 0.7); /* Semi-transparent gray overlay */
+    z-index: 1;
+}
+
+/* Text styling */
+.welcome-content {
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-content h1 {
+    font-size: 3rem;
     font-weight: bold;
+    color: #ff8c00; /* Orange color for main text */
+    margin: 0;
+}
+
+.welcome-content p {
+    font-size: 1.2rem;
+    color: #f0f0f0; /* Light color for subtitle */
+    margin-top: 10px;
+}
+
+/* Button Styling */
+.explore-btn {
+    background-color: #4CAF50;
     color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Add shadow for text readability */
-    animation: fadeIn 1.5s ease-out;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+    position: relative;
+}
+
+.explore-btn:hover {
+    background-color: #388E3C;
+}
+
+/* Menu Section */
+.menu-container .hidden {
+    display: none;
+}
+
+/* "See All" Button Styles */
+.see-all-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#see-all-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#see-all-btn:hover {
+    background-color: #388E3C;
+}
+
+/* Menu Section */
+#menu {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+#menu h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.menu-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.menu-item .price {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.menu-item .order-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.menu-item .order-btn:hover {
+    background-color: #388E3C;
+}
+/* Menu Section */
+.menu-container .hidden {
+    display: none;
+}
+
+/* "See All" Button Styles */
+.see-all-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#see-all-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#see-all-btn:hover {
+    background-color: #388E3C;
 }
 
 #welcome p {
